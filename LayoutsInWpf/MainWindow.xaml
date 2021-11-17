@@ -5,8 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LayoutsInWpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="MainWindow" Height="450" Width="800" Background="Wheat">
+    <StackPanel Margin="10" Background="green">
+        <StackPanel Margin="10" Orientation="Horizontal" Background="Wheat">
+            <Label Content="Name" Width="100px"></Label>
+            <TextBox Width="200px"></TextBox>
+        </StackPanel>
+        <StackPanel Margin="10" Orientation="Horizontal" Background="Wheat">
+            <Label Content="Registraton" Width="100px"></Label>
+            <TextBox Width="200px"></TextBox>
+        </StackPanel>
+        <WrapPanel Background="Yellow">
+            <Button Width="100px" Height="30px" Margin="10px">Button</Button>
+            <Button Width="100px" Height="30px" Margin="10px">Button</Button>
+            <Button Width="100px" Height="30px" Margin="10px">Button</Button>
+            <Button Width="100px" Height="30px" Margin="10px">Button</Button>
+            <Button Width="100px" Height="30px" Margin="10px">Button</Button>
+            <Button Width="100px" Height="30px" Margin="10px">Button</Button>
+            <Button Width="100px" Height="30px" Margin="10px">Button</Button>
+        </WrapPanel>
+        <Canvas Background="Blue" Height="50px">
+            <CheckBox Canvas.Left="100px" Canvas.Top="20px">Checked Me</CheckBox>
+        </Canvas>
+        <DockPanel>
+            <Button Width="100px" Height="30px" Margin="10px">Button</Button>
+            <Button Width="100px" Height="30px" Margin="10px">Button</Button>
+            <Button Width="100px" Height="30px" Margin="10px">Button</Button>
+            <Button Width="100px" Height="30px" Margin="10px">Button</Button>
+        </DockPanel>
+    <Button Foreground="White" Background="Red" Width="100px" Height="40px">Button</Button>
+    </StackPanel>
 </Window>
