@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:ResourcesWpf"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    
+    <SolidColorBrush x:Key="WindowBackColor" Color="Wheat"></SolidColorBrush>
+    <system:String x:Key="WindowTitleIs">Title Come with resource dictionary</system:String>
+    
+    <SolidColorBrush x:Key="ButtonBackColor" Color="Red"></SolidColorBrush>
+    <SolidColorBrush x:Key="ButtonForeColor" Color="White"></SolidColorBrush>
+    <system:String x:Key="Name">Kumar</system:String>
+    <system:String x:Key="Age">18</system:String>
+    <system:String x:Key="Profesion">Teacher</system:String>
+
+    <system:String x:Key="ButtonText">Submit Info</system:String>
+
+</ResourceDictionary>
