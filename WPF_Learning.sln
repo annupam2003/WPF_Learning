@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControlsInWpf", "ControlsIn
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyProperties", "DependencyProperties\DependencyProperties.csproj", "{6CA1CEC0-5415-47FA-9B45-5C1FD8A3CCF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourcesWpf", "ResourcesWpf\ResourcesWpf.csproj", "{B2086D59-73EE-49C8-8145-994E6EFF66B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResourcesWpf", "ResourcesWpf\ResourcesWpf.csproj", "{B2086D59-73EE-49C8-8145-994E6EFF66B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelativeSourceInWpf", "RelativeSourceInWpf\RelativeSourceInWpf.csproj", "{DBF20017-3CDF-4858-AFD9-8EBAEF64429F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B2086D59-73EE-49C8-8145-994E6EFF66B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2086D59-73EE-49C8-8145-994E6EFF66B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2086D59-73EE-49C8-8145-994E6EFF66B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBF20017-3CDF-4858-AFD9-8EBAEF64429F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBF20017-3CDF-4858-AFD9-8EBAEF64429F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBF20017-3CDF-4858-AFD9-8EBAEF64429F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBF20017-3CDF-4858-AFD9-8EBAEF64429F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

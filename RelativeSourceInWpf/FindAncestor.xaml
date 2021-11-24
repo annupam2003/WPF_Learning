@@ -1,0 +1,27 @@
+﻿<Window x:Class="RelativeSourceInWpf.FindAncestor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RelativeSourceInWpf"
+        mc:Ignorable="d"
+        Title="Ancestor" Height="450" Width="800">
+    <Canvas Name="Canvas1_Parent0" Background="Red" Margin="10">
+        <Border Name="Border1_Parent1" Background="blue" Margin="10">
+            <Canvas Name="Canvas2_Parent2" Background="Yellow" Margin="10">
+                <Border Name="Border2_Parent3" Background="Green" Margin="10">
+                    <StackPanel Name="StackPanel1_Parent4" Background="Brown" Margin="10">
+                        <StackPanel Name="StackPanel2_Parent4" Background="White" Margin="10">
+                            <StackPanel Name="StackPanel3_Parent4" Background="Red" Margin="10">
+                                <TextBlock FontSize="16" Margin="5" Text="Name of the ancestor" Background="GreenYellow"/>
+                                <TextBlock FontSize="16" Margin="50" 
+                                           Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Border}, AncestorLevel = 2}, Path=Name}" 
+                                           Width="200" Background="YellowGreen"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </Canvas>
+        </Border>
+    </Canvas>
+</Window>
