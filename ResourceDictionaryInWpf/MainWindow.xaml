@@ -1,0 +1,26 @@
+﻿<Window x:Class="ResourceDictionaryInWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ResourceDictionaryInWpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Orientation="Vertical">
+        <StackPanel.Resources>
+            <ResourceDictionary>
+                <BitmapImage x:Key="check" UriSource="Resources/check.png"/>
+                <BitmapImage x:Key="uncheck" UriSource="Resources/uncheck.png"/>
+            </ResourceDictionary>
+        </StackPanel.Resources>
+        <StackPanel Orientation="Vertical" Margin="20" >
+            <Image Width="20" Height="20" Source="{StaticResource check}"/>
+            <Image Width="20" Height="20" Source="{StaticResource uncheck}"/>
+            <Image x:Name="ImgCongrol" Width="20" Height="20" Source="{DynamicResource check}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <CheckBox x:Name="checkBoxChecked" Checked="checkBoxChecked_Checked"></CheckBox>
+        </StackPanel>
+
+    </StackPanel>
+</Window>

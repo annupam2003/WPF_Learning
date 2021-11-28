@@ -1,0 +1,24 @@
+﻿<Window x:Class="ResourcesInWpf.ControlLevel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ResourcesInWpf"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="ControlLevel" Height="450" Width="800">
+    <StackPanel>
+        <StackPanel.Resources>
+            <system:String x:Key="MyName" >Control Level Recource</system:String>
+            <SolidColorBrush x:Key="myColor" Color="Green"/>
+            <Style TargetType="TextBox">
+                <Setter Property="Background" Value="SkyBlue" />
+                <Setter Property="Foreground" Value="Brown"/>
+            </Style>
+        </StackPanel.Resources>
+        <TextBox Height="30" Width="500" HorizontalAlignment="Center" Text="{StaticResource MyName}" ></TextBox>
+        <TextBox Height="30" Width="500" Background="{StaticResource ResourceKey=myColor}" HorizontalAlignment="Center">Control Level Static Resources Use</TextBox>
+        <TextBox Height="30" Width="500" Background="{DynamicResource myColor}" HorizontalAlignment="Center">Control Level Dynamic Resources Use</TextBox>
+        <Button x:Name="btn" Width="200" Content="Dynamic Resource" Click="btn_Click"/>
+    </StackPanel>
+</Window>
