@@ -1,0 +1,21 @@
+﻿<Application x:Class="ResourcesDictionaryInWpf.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ResourcesDictionaryInWpf"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <ResourceDictionary>
+
+            <BitmapImage x:Key="appChk" UriSource="./Resources/check.png" />
+            <BitmapImage x:Key="appUnchk" UriSource="./Resources/uncheck.png" />
+            <BitmapImage x:Key="appchg" UriSource="./Resources/uncheck.png" />
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ImageResourceDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>
