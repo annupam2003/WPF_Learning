@@ -1,0 +1,16 @@
+﻿<Window x:Class="BasicDataBindings.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BasicDataBindings"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Orientation="Vertical" Margin="10">
+        <Slider x:Name="myProgress" Minimum="0" Maximum="100"/>
+        <TextBox x:Name="txt1" Width="100" Text="{Binding ElementName=myProgress, Path=Value,Mode=OneWay}"/>
+        <TextBox x:Name="txt2" Width="100" Text="{Binding ElementName=myProgress, Path=Value,Mode=TwoWay}"/>
+        <TextBox x:Name="txt3" Width="100" Text="{Binding ElementName=myProgress, Path=Value,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox x:Name="txt4" Width="100" Text="{Binding ElementName=myProgress, Path=Value,Mode=OneWayToSource}"/>
+    </StackPanel>
+</Window>

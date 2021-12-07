@@ -1,0 +1,51 @@
+﻿<!--Property Trigger Deal Dependency Property at run time
+    We can pass some condition  in trigger and condition is true
+    then we can modify one or multiple dependency property at once-->
+    
+    <Window x:Class="BasicTriggers.PropertyTrigger"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BasicTriggers"
+        mc:Ignorable="d"
+        Title="PropertyTrigger" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="TriggerStyle" TargetType="{x:Type Button}">
+            <Setter Property="Foreground" Value="Blue"/> 
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="50"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="FontSize" Value="24"/>
+                    <Setter Property="Width" Value="400"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    
+    <StackPanel Orientation="Vertical">
+        <StackPanel Margin="10"  Background="AliceBlue">
+            <Button x:Name="btn1" Content="Trigger Property" Style="{StaticResource TriggerStyle}"/>
+        </StackPanel>
+        <StackPanel Margin="10" Background="Azure" >
+            <TextBox x:Name="txtbox1" Width="200" Margin="10">
+                <TextBox.Style>
+                    <Style TargetType="{x:Type TextBox}">
+                        <Setter Property="FontSize" Value="12"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="FontSize" Value="18"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
+            <TextBox x:Name="txtbox2"/>
+        </StackPanel>
+        
+    </StackPanel>
+</Window>
+    
+    

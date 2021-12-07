@@ -1,0 +1,17 @@
+﻿<Window x:Class="DataBindingProj01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataBindingProj01"
+        mc:Ignorable="d"
+        Title="Simple Data Binding Sample"
+        Height="600" Width="800">
+    
+    <Border Margin="5" BorderBrush="Aqua" BorderThickness="1" Padding="8" CornerRadius="3">
+        <StackPanel>
+            <Button x:Name="CreateASimpleBinding"  Click="CreateASimpleBinding_Click">Create A Simple Binding</Button>
+            <Button x:Name="SpecifyTheBindingSource" Click="SpecifyTheBindingSource_Click">Specify The Binding Source</Button>
+        </StackPanel>
+    </Border>
+</Window>
