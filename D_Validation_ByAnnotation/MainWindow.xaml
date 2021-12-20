@@ -11,8 +11,19 @@
     </Window.DataContext>
     <StackPanel Orientation="Vertical" Background="Wheat">
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 50 0 0">
-            <TextBox Width="500" Text="{Binding UserName, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{StaticResource CustomError}"></TextBox>
-            <Button Height="25" Width="100" Margin="1 0 0 0" Content="Submit"></Button>
+            <TextBox x:Name="txt" Width="500" Text="{Binding UserName, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{StaticResource CustomError}"></TextBox>
+            <Button Height="25" Width="100" Margin="1 0 0 0" Content="Submit">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="IsEnabled" Value="False"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=txt, Path=(Validation.HasError)}" Value="false">
+                                <Setter Property="IsEnabled" Value="True"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
         </StackPanel>
     </StackPanel>
 </Window>
